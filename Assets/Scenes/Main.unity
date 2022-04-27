@@ -6413,6 +6413,7 @@ MonoBehaviour:
     m_Bits: 64
   jumpHeight: 3
   jumpCounter: 1
+  animacionArma: {fileID: 178759965}
 --- !u!114 &1740182799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12747,22 +12748,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1227869709720469892}
   bullet: {fileID: 458735855991189990, guid: 7be51626141d8d84faf237dfa5d345a8, type: 3}
-  shootForce: 2500
+  shootForce: 10000
   shootRate: 0.1
---- !u!111 &2365028934686729883
-Animation:
+--- !u!95 &2365028934686729883
+Animator:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178759965}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 0}
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 575c33709551d12438b9e26b394de808, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

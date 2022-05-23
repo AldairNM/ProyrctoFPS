@@ -20570,7 +20570,7 @@ MonoBehaviour:
   characterController: {fileID: 1740182794}
   speed0: 5
   speed1: 5
-  speed2: 10
+  speed2: 9
   gravity: -40
   groundCheck: {fileID: 181427253}
   sphereRadius: 0.3

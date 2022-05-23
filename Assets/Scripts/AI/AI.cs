@@ -46,7 +46,7 @@ public class AI : MonoBehaviour
         navMeshAgent.destination = destinations[i].transform.position;
         if (Vector3.Distance(transform.position,destinations[i].position) <= distanceToFollowPath)
         {
-            if (i != destinations.Length-1/*destinations[i] != destinations[destinations.Length - 1]*/)
+            if (destinations[i] != destinations[destinations.Length - 1])
             {
                 i++;
             }

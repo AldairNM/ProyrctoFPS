@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController characterController;
-    public float speed = 5f;
+    public float speed0 = 7f;
+    public float speed1 = 7f;
+    public float speed2 = 12f;
     public float gravity = -30f;
     public Transform groundCheck;
     public float sphereRadius = 0.3f;
@@ -15,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3;
     public float jumpCounter = 1;
     public GameObject animacionArma;
-    
+
+
     void Start()
     {
         
@@ -49,19 +52,19 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.LeftShift) && isGrounded)
         {
-            speed = 9f;
+            speed1 = speed2;
             animacionArma.GetComponent<Animator>().SetBool("correr", true);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed = 5f;
+            speed1 = speed0;
             animacionArma.GetComponent<Animator>().SetBool("correr", false);
         }
         /*if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }*/
-        characterController.Move(move * speed * Time.deltaTime);
+        characterController.Move(move * speed1 * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
     }
